@@ -1,0 +1,128 @@
+---
+title: Getting Started
+description: Set up your account and create your first documentation space in minutes to begin organizing your projects.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following ready:
+
+<Callout kind="info">
+
+- A valid email address for account verification
+- A modern web browser like Chrome, Firefox, or Safari
+- Optional: Node.js `{^18.0.0}` if using the CLI for uploads
+
+</Callout>
+
+## Create Your Account
+
+Sign up for Vaishnavi Nandankar in under a minute.
+
+<Steps>
+  <Step title="Visit the Signup Page" icon="external-link">
+    Navigate to `https://vaishnavinandankar.com/signup` in your browser.
+  </Step>
+  <Step title="Enter Your Details" icon="user">
+    Provide your email, create a strong password, and complete the CAPTCHA.
+  </Step>
+  <Step title="Verify Email" icon="mail">
+    Check your inbox for the verification link and click it to activate your account.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Return to `https://vaishnavinandankar.com/login` and sign in with your credentials.
+  </Step>
+</Steps>
+
+## Create Your First Documentation Space
+
+Once logged in, set up a space for your project.
+
+<Steps>
+  <Step title="Click New Space" icon="plus">
+    From the dashboard, select the `New Space` button in the top-right corner.
+  </Step>
+  <Step title="Name Your Space" icon="edit-3">
+    Enter a name like `My Project Docs` and add an optional description.
+  </Step>
+  <Step title="Choose Template" icon="file-text">
+    Select `Blank Space` for a clean start or pick a template for quick setup.
+  </Step>
+  <Step title="Create and Enter" icon="check-circle">
+    Click `Create`. You'll land in your new space's editor.
+  </Step>
+</Steps>
+
+## Interface Tour
+
+Familiarize yourself with the key areas of the Vaishnavi Nandankar interface.
+
+<Columns cols={3}>
+  <Card title="Navigation Sidebar" icon="menu" href="#">
+    Access spaces, files, and settings. Use search to find content quickly.
+  </Card>
+  <Card title="Editor Workspace" icon="edit-3" href="#">
+    Write MDX docs with live preview. Supports components like `<Callout>` and `<Steps>`.
+  </Card>
+  <Card title="Preview Panel" icon="eye" href="#">
+    Real-time rendering of your docs. Toggle between desktop and mobile views.
+  </Card>
+</Columns>
+
+<Expandable title="Advanced Navigation Tips" default-open="false">
+
+- Pin frequently used spaces to the top of the sidebar
+- Use keyboard shortcuts: `<kbd>Ctrl</kbd>+<kbd>P</kbd>` for quick search
+- Customize themes via `Settings > Appearance`
+
+</Expandable>
+
+## Upload Initial Project Files
+
+Add your project files to the space via web or CLI.
+
+<Tabs>
+  <Tab title="Web Drag & Drop" icon="upload">
+    In your space, open the `Files` tab. Drag files like `README.mdx` or `api.mdx` directly into the upload zone.
+  </Tab>
+  <Tab title="CLI Upload" icon="terminal">
+    Install the CLI first:
+
+    <CodeGroup tabs="npm,yarn">
+    ````bash
+    npm install -g @vaishnavinandankar/cli
+    ````
+
+    ````bash
+    yarn global add @vaishnavinandankar/cli
+    ````
+    </CodeGroup>
+
+    Authenticate and upload:
+
+    ````bash
+    vn login
+    vn space select "My Project Docs"
+    vn upload ./src/ --include="*.mdx,*.json"
+    ````
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+
+After uploading, refresh your space to see files in the sidebar. Start editing `index.mdx` for your homepage.
+
+</Callout>
+
+## Next Steps
+
+<Columns cols={2}>
+  <Card title="Customize Your Space" icon="settings" href="#">
+    Explore themes, custom domains, and permissions in the settings panel.
+  </Card>
+  <Card title="Write Your First Doc" icon="file-text" href="#">
+    Create pages with components. Check the [components guide](/introduction#components) for examples.
+  </Card>
+</Columns>
+
+Congratulations! You now have a fully functional documentation space. Organize your projects and collaborate with your team.

@@ -1,0 +1,116 @@
+---
+title: Core Features
+description: Explore the essential tools for managing and structuring your project documentation effectively.
+---
+
+## Overview
+
+Vaishnavi Nandankar provides a comprehensive suite of tools to streamline your project documentation. Organize content with intuitive folders, edit with powerful formatting options, search efficiently, and track changes via version control. These core features empower you to maintain professional, up-to-date docs without complexity.
+
+## Key Features
+
+Discover the essential capabilities at a glance.
+
+<Columns cols={2}>
+  <Card title="Document Organization" icon="folder" href="#document-organization">
+    Structure your docs hierarchically with folders and subfolders for easy navigation.
+  </Card>
+  <Card title="Editing & Formatting" icon="edit-3" href="#editing-formatting">
+    Rich text and Markdown editors with real-time previews.
+  </Card>
+  <Card title="Search & Filtering" icon="search" href="#search-filtering">
+    Powerful full-text search with advanced filters.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes, compare versions, and revert easily.
+  </Card>
+</Columns>
+
+## Document Organization and Folders
+
+Organize your documentation into logical structures using folders. Create nested hierarchies to group related pages, such as API references under a `docs/api` folder or tutorials under `guides`.
+
+<Steps>
+  <Step title="Create a Folder" icon="folder-plus">
+    Navigate to the root or any parent folder. Click the `New Folder` button and enter a name like `features`.
+  </Step>
+  <Step title="Add Documents" icon="file-plus">
+    Inside the folder, create new pages. Drag and drop to reorder or nest further.
+  </Step>
+  <Step title="Manage Structure" icon="settings">
+    Use the sidebar to collapse/expand folders and rename via right-click.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Limit folder depth to three levels for optimal navigation. Use clear, descriptive names like `user-guide` instead of vague terms.
+</Callout>
+
+## Editing and Formatting Options
+
+Edit pages with flexible tools supporting Markdown and rich text. Preview changes instantly and insert elements like tables or code blocks.
+
+<Tabs>
+  <Tab title="Markdown Editor" icon="code">
+    Write structured content using standard Markdown syntax.
+
+````markdown
+# Heading
+
+- List item
+- Another item
+
+**Bold** and _italic_ text.
+
+```javascript
+console.log('Hello, Vaishnavi Nandankar!');
+```
+````
+  </Tab>
+  <Tab title="Rich Text Editor" icon="edit-3">
+    Use a WYSIWYG interface for non-technical users. Insert images, links, and embeds via toolbar buttons.
+  </Tab>
+</Tabs>
+
+## Search and Filtering Capabilities
+
+Find content quickly with full-text search across all pages and folders. Filter by tags, dates, or authors for precise results.
+
+| Feature | Description |
+|---------|-------------|
+| Full-Text Search | Matches keywords in titles, content, and metadata. |
+| Filters | By folder, tag (`{feature}`, `{bugfix}`), or last edited. |
+| Advanced | Boolean operators like `docs AND api`. |
+
+<Callout kind="info">
+  Index updates in `<1s` for real-time results. Use quotes for exact phrases: `"version control"`.
+</Callout>
+
+## Version Control Basics
+
+Track every change with built-in version history. View diffs, restore previous versions, and collaborate safely.
+
+<CodeGroup tabs="CLI,UI">
+  ```bash
+  # Checkout a specific version
+  git checkout v1.2.0 docs/features.mdx
+
+  # View diff
+  git diff HEAD~1 docs/features.mdx
+  ```
+  ```javascript
+  // API example to fetch versions
+  const versions = await fetch('https://api.example.com/docs/versions?path=features.mdx');
+  console.log(versions);
+  ```
+</CodeGroup>
+
+<Expandable title="Advanced Version Workflow" default-open="false">
+
+  1. Enable branching for experiments.
+  2. Merge via pull requests with reviews.
+  3. Auto-save creates snapshots every 30s.
+
+</Expandable>
+
+Ready to dive deeper? Check the [Quickstart](/quickstart) or [Configuration](/configuration) pages.
